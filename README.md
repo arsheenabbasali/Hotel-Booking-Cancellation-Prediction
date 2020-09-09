@@ -23,3 +23,9 @@ This kind of prediction will help in producing better net demand forecasts, impr
 ### Data Source
 For this project, we are using **[Hotel Booking Demand](https://www.kaggle.com/jessemostipak/hotel-booking-demand)** from Kaggle. This data set contains booking information for a city hotel and a resort hotel and includes information such as when the booking was made, length of stay, the number of adults, children, and/or babies, and the number of available parking spaces, among other things. All personally identifying information has been removed from the data. 
 The data is originally from the article *Hotel Booking Demand Datasets*, written by Nuno Antonio, Ana Almeida, and Luis Nunes for Data in Brief, Volume 22, February 2019.
+
+### References
+* Zeytinci, E. (2019, December 30). Predicting Hotel Cancellations with Machine Learning [online](https://towardsdatascience.com/predicting-hotelcancellations-with-machine-learning-fa669f93e794)
+* Antonio, N., Almeida, A. D., & Nunes, L. (2019). Hotel booking demand datasets. Data in Brief, 22, 41–49. doi: 10.1016/j.dib.2018.11.126 
+* Mostipak, J. (2020, February 13). Hotel booking demand [online](https://www.kaggle.com/jessemostipak/hotel-booking-demand) 
+* Marcuswingen. (2020, March 6). EDA of bookings and ML to predict cancelations [Online](https://www.kaggle.com/marcuswingen/eda-of-bookings-and-ml-topredict-cancelations) 
