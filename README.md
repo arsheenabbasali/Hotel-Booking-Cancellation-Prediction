@@ -20,7 +20,7 @@ With the help of this project, we will try to explain how future cancelled hotel
 In this proposed project, we will be predicting whether a booking made in a hotel can be cancelled in future or not. For this, we have developed models that will identify and flag bookings with high cancellation probability by understanding the trends and features associated with it. Thus, hotels can act on these booking to contain the associated revenue losses. 
 This kind of prediction will help in producing better net demand forecasts, improve overbooking/cancellation policies, and have more assertive pricing and inventory allocation strategies. This analysis can also be used by hotels to identify their loyal customers who never cancel their booking and can provide loyalty benefits. 
 
-### Data Source
+### Data Acquisition
 For this project, we are using **[Hotel Booking Demand](https://www.kaggle.com/jessemostipak/hotel-booking-demand)** from Kaggle. This data set contains booking information for a city hotel and a resort hotel and includes information such as when the booking was made, length of stay, the number of adults, children, and/or babies, and the number of available parking spaces, among other things. All personally identifying information has been removed from the data. 
 The data is originally from the article *Hotel Booking Demand Datasets*, written by Nuno Antonio, Ana Almeida, and Luis Nunes for Data in Brief, Volume 22, February 2019.
 
