@@ -36,8 +36,6 @@ Total:5 rows × 32 columns
 # Number of Null Values in data:
 hotel_bookings.isna().sum()
 ```
-```{.python .output}
-  
 hotel                                  0
 is_canceled                            0
 lead_time                              0
@@ -71,6 +69,6 @@ total_of_special_requests              0
 reservation_status                     0
 reservation_status_date                0
 dtype: int64
-```
+
 
 
