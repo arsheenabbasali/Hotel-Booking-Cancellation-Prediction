@@ -1,16 +1,14 @@
 # Overview
 
-## Data Cleaning and Preparation
+## [Data Cleaning and Preparation](Data_Cleaning/Data_Cleaning.md)
 
-## Data Exploration
+## [Data Exploration](Data_Exploration/Data_Exploration.md)
 
-## Feature Selection
+## [Feature Selection](Feature_Selection/Feature_Selection.md)
 
-## Models and Pipelines
+## [Models and Pipeline](Pipeline.md)
 
-## Deep Learning
-
-## Recommendations
+## [Deep Learning](Deep_Learning/Deep_Learning.md)
 
 ### Introduction
 The rate of cancellation for bookings in the hospitality industry is quite high in the competitive market offering no deposit bookings. Once the booking has been cancelled, there is almost nothing to be done at the end of hotel. This kind of setting creates discomfort and monetary losses for many hotels and creates a demand to take prior precautions for high number of cancellations. Therefore, predicting bookings that can be cancelled and preventing these cancellations will create value for hospitality industry. 
@@ -29,3 +27,12 @@ The data is originally from the article *Hotel Booking Demand Datasets*, written
 * Antonio, N., Almeida, A. D., & Nunes, L. (2019). Hotel booking demand datasets. Data in Brief, 22, 41–49. doi: 10.1016/j.dib.2018.11.126 
 * Mostipak, J. (2020, February 13). Hotel booking demand [online](https://www.kaggle.com/jessemostipak/hotel-booking-demand) 
 * Marcuswingen. (2020, March 6). EDA of bookings and ML to predict cancelations [Online](https://www.kaggle.com/marcuswingen/eda-of-bookings-and-ml-topredict-cancelations) 
+
+#### Libraries Used
+`Python`
+* [Python Standard Library](https://docs.python.org/2/library/): Built in python modules.
+* [Numpy](http://www.numpy.org/): Scientific computing with python.
+* [Pandas](http://pandas.pydata.org/): Data analysis tools.
+* [matplotlib](https://matplotlib.org/): Static, animated, and interactive visualizations.
+* [Seaborn](https://seaborn.pydata.org/): Python data visualization library.
+* [Pyspark](https://spark.apache.org/docs/latest/api/python/pyspark.html): PySpark is the Python API for Spark.
