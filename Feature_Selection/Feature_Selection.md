@@ -12,7 +12,7 @@
 
 Our target variable `is_canceled` is a categorical variable. Majority of the features in our dataset are categorical variables. To find relation between two categorical variables we conducted the Cramer’s V test. The input of the Cramer’s V test is the statistic component of the chi square test. Below is the formula for the Cramer’s V test:  
 
-![Image](Images/CramerV_formula.png)  
+![Image](Images/CramerV%20_formula.png)  
 
 ```Python
 cramers={}  
