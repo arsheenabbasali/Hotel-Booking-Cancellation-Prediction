@@ -64,7 +64,7 @@ train = train0.union(train1)
 test = test0.union(test1)
 ```
 Then, after splitting the data, we implemented three models:
-* **GBt Classifier**
+* **GBT Classifier**
 * **Decision Tree**
 * **Random Forest**
 
