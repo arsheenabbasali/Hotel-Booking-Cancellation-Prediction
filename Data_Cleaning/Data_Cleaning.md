@@ -29,9 +29,10 @@ hotel_bookings.head(10)
 |Resort Hotel|	0	|13	|2015	|July	|27|	1|	0	|1|	1	|...	No Deposit|	304.0|	NaN|	0|	Transient|	75.0|	0|	0	|Check-Out|	2015-07-02|
 |Resort Hotel|	0	|14	|2015	|July	|27|	1|	0	|2|	2	|...	No Deposit|	240.0	|NaN|	0	|Transient	|98.0	|0|	1	|Check-Out|	2015-07-03|  
 
-Total:5 rows × 32 columns
+Total: 5 rows × 32 columns
 
 ### Data Cleaning
+##### Handling Missing Values:
 Getting number of *Null* vallues in each column
 ```Python
 # Number of Null Values in data:
@@ -47,6 +48,20 @@ Replacing `Null` values in `country` attribute with `Unknown` text for each of a
 ```Python
 hotel_bookings['country'].fillna('Unknown',inplace=True)
 ```
+During this preprocessing, we found that there are some rows with `children`, `adults` and `babies` = 0, in short with no guests in the booking. This is a false booking and not needed in the further analysis. So we decided to remove all these rows.
+``` Python
+hotel_bookings=hotel_bookings.drop(hotel_bookings[(hotel_bookings['children']==0) & (hotel_bookings['adults']==0) & (hotel_bookings['babies']==0)].index)
+```
+There are some bookings which has no date for `day_of_leaving`, it means that there is no checkout for the booking and it has either been *Cancelled** or there is *No Show*. So we have replaced `None` in `day_of_leaving` for all these bookings.
+```Python
+hotel_bookings.loc[hotel_bookings['reservation_status']!='Check-Out','day_of_leaving']=None
+```
+##### Outlier Detection:
+* We determined the lower and upper points of each column
+* If there is point between the lower point and the upper point or equal, we do not apply any filtering else, we have removed observations larger and lower than the upper point and lower point of the observations from the dataset.
+
+
+#### Managing Data Types:
 As the dataframe size is huge, a step is taken here to convert the data-types of each column to *Category* to reduce the dataframe size. The main motive of this step is to reduce the processing time for the data cleaning.
 ```Python
 hotel_bookings['hotel']=hotel_bookings['hotel'].astype('category')
@@ -69,10 +84,7 @@ hotel_bookings['stays_in_week_nights']=hotel_bookings['stays_in_week_nights'].as
 hotel_bookings['assigned_room_type']=hotel_bookings['assigned_room_type'].astype('category')
 hotel_bookings['arrival_date_month']=hotel_bookings['arrival_date_month'].astype('category')
 ```
-During this preprocessing, we found that there are some rows with `children`, `adults` and `babies` = 0, in short with no guests in the booking. This is a false booking and not needed in the further analysis. So we decided to remove all these rows.
-``` Python
-hotel_bookings=hotel_bookings.drop(hotel_bookings[(hotel_bookings['children']==0) & (hotel_bookings['adults']==0) & (hotel_bookings['babies']==0)].index)
-```
+##### Combining Columns
 Converting Day, Month, Year into a single arrival date for ease of analysis.
 ```Python
 month_number={'January':1,
@@ -100,10 +112,7 @@ hotel_bookings[(hotel_bookings['stays_in_week_nights']==0) & (hotel_bookings['st
 ```
 The number of one day stays came out to be *645*.
 
-There are some bookings which has no date for `day_of_leaving`, it means that there is no checkout for the booking and it has either been *Cancelled** or there is *No Show*. So we have replaced `None` in `day_of_leaving` for all these bookings.
-```Python
-hotel_bookings.loc[hotel_bookings['reservation_status']!='Check-Out','day_of_leaving']=None
-```
+##### Introducing New Attributes:
 For the ease of analysis, we decided to create two more attributes to the data.
 * `total_night_stays`: this attribute signifies the number of night stays for a booking. It is of integer data-type. This column is calculated by adding data of two other attributes i.e. `stays_in_week_nights` and `stays_in_weekend_nigts`.
 ```Python
