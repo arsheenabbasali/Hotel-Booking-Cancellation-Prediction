@@ -50,7 +50,7 @@ During this preprocessing, we found that there are some rows with `children`, `a
 ``` Python
 hotel_bookings=hotel_bookings.drop(hotel_bookings[(hotel_bookings['children']==0) & (hotel_bookings['adults']==0) & (hotel_bookings['babies']==0)].index)
 ```
-There are some bookings which has no date for `day_of_leaving`, it means that there is no checkout for the booking and it has either been *Cancelled** or there is *No Show*. So we have replaced `None` in `day_of_leaving` for all these bookings.
+There are some bookings which has no date for `day_of_leaving`, it means that there is no checkout for the booking and it has either been *Cancelled* or there is *No Show*. So we have replaced `None` in `day_of_leaving` for all these bookings.
 ```Python
 hotel_bookings.loc[hotel_bookings['reservation_status']!='Check-Out','day_of_leaving']=None
 ```
