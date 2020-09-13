@@ -14,8 +14,8 @@ To start with data exploration, we analysed the total number of bookings by diff
 
 ![Image](Images/booking_segments_analysis.png)  
 
-
 **Inference**: The above graph shows that most bookings in both hotels are made through online booking segment, which constitutes to around 47% (approx.)  
+
 
 Now, let see the distribution of booking by hotels  
 
@@ -23,11 +23,13 @@ Now, let see the distribution of booking by hotels
 
 **Inference**: The above graph shows that maximum percentage of bookings are made by City hotel, which constitutes around 66% (approx.)  
 
+
 We also calculated the percentage of bookings cancelled and by each hotel:  
 
 ![Image](Images/bookings_cancelled.png)  
 
 **Inference**: The above data shows that City hotel experiences maximum percentage of cancellations among both the hotels.  
+
 
 Let see how the deposit `deposit_type` made before booking affects the booking cancellation where `is_canceled` is our target variable to predict.  
 
@@ -35,17 +37,20 @@ Let see how the deposit `deposit_type` made before booking affects the booking c
 
 **Inference**: The above graph shows that maximum number of bookings are made with no deposit, that’s why they are getting cancelled.  
 
+
 Now, let us analyse how special request made by guests affects the booking cancellation.  
 
 ![Image](Images/special_request.png)  
 
 **Inference**: The above graph shows that the bookings which had no special request are more likely to cancel compared to the bookings which have special requests.  
 
+
 To analyse the above inference further we plotted a graph for special request for car parking space and analysed how it affects the booking cancellation.  
 
 ![Image](Images/carparking_space.png)  
 
 **Inference**: The above graph shows that people who have requested for car parking space never cancelled the booking whereas the people who have not requested parking space mostly cancelled the booking.  
+
 
 In the last of data-exploration we tried to plot the correlation heat map of all the attributes to find the best features for the further analysis.  
 
