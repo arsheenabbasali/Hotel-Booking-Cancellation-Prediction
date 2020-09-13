@@ -35,7 +35,7 @@ df2.sort_values(['Date'], ascending=True, inplace=True)
 ```
 **PLOT: Cancellation count Vs. Day**  
 
-![Image](Images/cancellaton_perday.png)  
+![Image](Images/cancelaton_per_day.PNG)  
 
 
 ##### Model Configuration  
@@ -54,13 +54,13 @@ model.fit(trainX, trainY, epochs=100, batch_size=1, verbose=2)
 ##### Prediction & Validation  
 Predicted the cancellations PER day  
 
-![Image](Images/prediction_per_day.png)  
+![Image](Images/prediction_per_day.PNG)  
 
 **Inference**: We saw the predicted values follow the exact trend as the actual values but are forecasted much lower , this was due to the negative-biased forecast error that we can observe from the picture below.  
 
 Run the LSTM model on the created Validation Dataset.  
 
-![Image](Images/validation_per_day.png)
+![Image](Images/validation_per_day.PNG)
 
 **Inference**: Since the data is plotted on a daily basis the number of observations were very high ,  hence to understand the cancellation trend we repeated the same process on a WEEKLY BASIS.  
 
@@ -92,7 +92,7 @@ predictions = testPredict
 ##### Prediction & Validation  
 Predicted the cancellations PER week.
 
-![Image](Images/predictions_per_week.png)  
+![Image](Images/predictions_per_week.PNG)  
 
 **Inference**: By changing the model weekly basis we can see that it is easier to understand the cancellations per week as by this we could reduce the bias in the dataset as the dataset had observations of 2016 , initial half of 2015 and final half of 2017. Also here the predicted values shows the exact trend as that of the actual value , unfortunately here also they suffered from a negative bias error but this error was lesser than the forecast error observed from the daily basis prediction. 
 * Calculate the accuracy  
@@ -100,7 +100,5 @@ After mathematically removing the forecast error from the predictions we could f
 
 #### Future Work  
 Run the booking cancellation predictions on an ARIMA model as it triangulates the data and avoids the negative forecast bias error. 
-
-
 
 
