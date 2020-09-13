@@ -1,16 +1,14 @@
-## [Overview](README.md)
+## [Overview](../README.md)
 
 # Data Cleaning and Preparation
 
-## Data Exploration
+## [Data Exploration](../Data_Exploration/Data_Exploration.md)
 
-## Feature Selection
+## [Feature Selection](../Feature_Selection/Feature_Selection.md)
 
-## Models and Pipelines
+## [Models and Pipeline](../Pipeline.md)
 
-## Deep Learning
-
-## Recommendations
+## [Deep Learning](../Deep_Learning/Deep_Learning.md)
 
 In this section, we begin with loading the dataset and finding the number of *Null* values in each column of the dataset and replacing it with suitable alternative.
 
@@ -58,7 +56,8 @@ hotel_bookings.loc[hotel_bookings['reservation_status']!='Check-Out','day_of_lea
 ```
 ##### Outlier Detection:
 * We determined the lower and upper points of each column
-* If there is point between the lower point and the upper point or equal, we do not apply any filtering else, we have removed observations larger and lower than the upper point and lower point of the observations from the dataset.
+* If there is point between the lower point and the upper point or equal, we do not apply any filtering else, we have removed observations larger and lower than the upper point and lower point of the observations from the dataset.  
+
 ![Image](https://github.com/arsheenabbasali/Hotel-Booking-Cancellation-Prediction/blob/master/Data_Cleaning/Images/Outlier_Detection.jpg)  
 
 ##### Managing Data Types:
