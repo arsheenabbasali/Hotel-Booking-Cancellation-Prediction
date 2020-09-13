@@ -59,9 +59,9 @@ hotel_bookings.loc[hotel_bookings['reservation_status']!='Check-Out','day_of_lea
 ##### Outlier Detection:
 * We determined the lower and upper points of each column
 * If there is point between the lower point and the upper point or equal, we do not apply any filtering else, we have removed observations larger and lower than the upper point and lower point of the observations from the dataset.
+![Image](https://github.com/arsheenabbasali/Hotel-Booking-Cancellation-Prediction/blob/master/Data_Cleaning/Images/Outlier_Detection.jpg)  
 
-
-#### Managing Data Types:
+##### Managing Data Types:
 As the dataframe size is huge, a step is taken here to convert the data-types of each column to *Category* to reduce the dataframe size. The main motive of this step is to reduce the processing time for the data cleaning.
 ```Python
 hotel_bookings['hotel']=hotel_bookings['hotel'].astype('category')
