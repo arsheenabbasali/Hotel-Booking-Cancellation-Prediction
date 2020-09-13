@@ -35,7 +35,7 @@ df2.sort_values(['Date'], ascending=True, inplace=True)
 ```
 **PLOT: Cancellation count Vs. Day**  
 
-![Image](Images/cancelaton_per_day.PNG)  
+![Image](Images/cancelation_per_day.PNG)  
 
 
 ##### Model Configuration  
@@ -92,7 +92,7 @@ predictions = testPredict
 ##### Prediction & Validation  
 Predicted the cancellations PER week.
 
-![Image](Images/predictions_per_week.PNG)  
+![Image](Images/validation_per_week.PNG)  
 
 **Inference**: By changing the model weekly basis we can see that it is easier to understand the cancellations per week as by this we could reduce the bias in the dataset as the dataset had observations of 2016 , initial half of 2015 and final half of 2017. Also here the predicted values shows the exact trend as that of the actual value , unfortunately here also they suffered from a negative bias error but this error was lesser than the forecast error observed from the daily basis prediction. 
 * Calculate the accuracy  
